@@ -1,0 +1,131 @@
+
+*{box-sizing: border-box;
+font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;}
+body {background: url(../imgs/pokeball-bg-pattern-100x100.png) center center repeat;}
+.pokedex-wrap {display: flex; flex-wrap: wrap; justify-content: center; align-items: end;}
+.pokedex-left, .pokedex-right {background-color:#dc1830; width: 100%;
+    max-width: 540px;
+    height: auto;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; 
+    flex:1 1 50%;}
+.pokedex-right {margin-top:5%; display: flex; 
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around; padding: 24px 44px;}
+.pokedex-outline {border:2px solid #353a46;}
+.topbar {width: 100%;     height: 150px;}
+.pantalla {width: 100%;
+    height: auto;
+    padding: 12px 24px;}
+.pantalla-inner {background-color: #fff;
+    padding: 0 44px;
+    height: auto;
+    margin: 0 auto;
+    border-bottom-left-radius: 5%;
+}
+.pre-imagen {display:flex; justify-content: center; padding: 12px;}
+.pre-imagen .circle {margin:0 12px;}
+.imagen {background-color:#353a46; height:240px; padding:0 24px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center; color:#ffffff; text-transform: capitalize; box-shadow: 12px 12px 0px rgba(0,0,0,.1) inset;}
+.post-imagen {display: flex; justify-content: space-between; padding:12px 0;}
+
+.element {border: 2px solid #353a46; box-shadow:4px 4px 0px rgba(0,0,0,.15);}
+.circle {border-radius: 50%;}
+.red {background-color:#c2133a;}
+.blue {background-color:#299ec1}
+.black {background-color:#353a46;}
+.white {background-color:#ffffff;}
+.yellow {background-color:#f5c912;}
+
+.btn-sm {width: 55px;
+    height: 12px;
+    border-radius: 10px;
+    display: inline-block;
+    margin:0 12px 5px;}
+
+.row {display: flex; margin-bottom: 12px; flex-wrap: wrap;}
+.row > .col-12 {flex:1 1 100%;}
+.row > .col-6 {flex:1 1 50%;}
+.row > .col-2 {flex:1 1 16.66666%;}
+.row > .col-4 {flex:1 1 33.33333%;}
+
+.controles {padding:12px 24px;}
+.pantallita {background-color:#6fdbb8; border-radius: 10px; height:100px;}
+.dpad {padding: 24px 28px; display: flex; flex-wrap: wrap;}
+.dpad-sq {flex: 1 1 33.3333%; background-color:#353a46; height:auto; min-height: 44px;}
+.dpad-sq.clear {background-color: rgba(0,0,0,0);}
+.dpad-sq.up {border-top-left-radius: 8px; border-top-right-radius: 8px;}
+.dpad-sq.down {border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;}
+.dpad-sq.left {border-top-left-radius: 8px; border-bottom-left-radius: 8px;}
+.dpad-sq.right {border-top-right-radius: 8px; border-bottom-right-radius: 8px;}
+
+.topbar-right {height:100px;}
+.pantallita-2 {
+    width: 100%;
+    height:auto;
+    max-height: 240px;
+    padding: 12px 24px;
+    background-color:#353a46;
+    margin-bottom: 10px;
+    color:#ffffff;
+    text-transform: capitalize;
+    line-height:1.5;
+    overflow: auto;
+}
+.botones-1 {display: flex; flex-wrap: wrap; margin-bottom: 12px;}
+.botones-1>*{flex: 1 1 20%;}
+.btn-md {height:40px;}
+
+.botones-2 {}
+.botones-3 {display: flex; flex-wrap: wrap;}
+.botones-3 > * {flex: 0 0 20%;}
+.botones-4 {display: flex; justify-content: end; margin-bottom: 12px;}
+
+.pantallita-3 {
+    height: 60px;
+    padding: 12px 24px;
+    background-color:#353a46;
+    margin-bottom: 10px;
+    color:#ffffff;
+}
+.botones-5 {display:flex; flex-wrap: wrap; justify-content: space-between;}
+.botones-5 > * {flex:0 0 48%;}
+
+.pantallita-2, .pantallita-3 {border-radius: 10px; box-shadow: 12px 12px 0px rgba(0,0,0,.1) inset;}
+
+/*.circle:after {content:""; background-color:#ffffff; height:5px; width:5px; position:absolute; top:0; left:0; }*/
+
+input[name="pokeName"] {width: 100%;
+    height: 100%;
+    padding: 24px;
+    font-size: 14px;
+    background-color: rgba(0,0,0,0);
+    border-radius: 10px;
+    border:0px solid;
+}
+
+.btn-consulta {width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 12px 12px;}
+.btn-search {height: 48px;
+    width: 48px;
+    position: relative;
+    background: url(../imgs/search.png) no-repeat center center #353a46;
+    background-size: 85%;
+    cursor:pointer;
+}
+.btn-search:hover, .btn-search:focus {background-color:#f5c912;}
+
+.poke-value {color:#6fdbb8;}
+
+/*REPSONSIVE*/
+@media screen and (max-width:480px) {
+    .row > .col-4 {flex: 1 1 100%;}
+    .dpad {max-width:60%; margin:0 auto;}
+    .pokedex-right {margin-top:0;}
+    .pantalla-inner {padding:0 12px;}
+    .imagen {font-size:14px;}
+}
