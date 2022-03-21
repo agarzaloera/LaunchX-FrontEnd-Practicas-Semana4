@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <h1 style="text-align: center;">Pokedex LaunchX</h1>
+
+    <section class="pokedex-wrap">
+        <div class="pokedex-left element">
+            <div class="topbar">
+                <div class="element" style="width:120px; height:120px; background-color:#fff; position:absolute; border-radius: 50%; left: 14px; top: 14px;"></div>
+                <div class="element" style="width:100px; height:100px; background-color:#299ec1; position:absolute; border-radius: 50%; left: 24px; top: 24px;"></div>
+                <div class="element" style="width:32px; height:32px; background-color:#c2133a; position:absolute; border-radius: 50%; left: 170px; top: 19px;"></div>
+                <div class="element yellow" style="width:32px; height:32px; position:absolute; border-radius: 50%; left: 220px; top: 19px;"></div>
+                <div class="element" style="width:32px; height:32px; background-color:#4fa95f; position:absolute; border-radius: 50%; left: 270px; top: 19px;"></div>
+            </div>
+            <div class="pantalla">
+                <div class="element pantalla-inner">
+                    <div class="pre-imagen">
+                        <div class="element circle" style="width:24px; height:24px; background-color:#c2133a;"></div>
+                        <div class="element circle" style="width:24px; height:24px; background-color:#c2133a;"></div>
+                    </div>
+                    <div class="imagen">
+                        <div class="">
+                            <div class="col-12">
+                            <img src="./pokeball.png" alt="Introduce un Pokémon" id="pokeImg" width="150">
+                            </div>
+                        </div>
+                        <div class="">
+                            <div id="pokeId" class="col-6 poke-value"></div> 
+                            <div id="pokeTitle" class="col-6 poke-value"></div>
+                        </div>
+                    </div>
+                    <div class="post-imagen">
+                        <div class="element circle" style="width:24px; height:24px; background-color:#c2133a;"></div>
+                        <div class="" style="width:48px; height:24px;">
+                            <div style="background-color:#353a46; height:6px; margin-bottom: 3px;"></div>
+                            <div style="background-color:#353a46; height:6px; margin-bottom: 3px;"></div>
+                            <div style="background-color:#353a46; height:6px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="controles">
+                <div class="row">
+                    <div class="" style="padding:5px 12px; text-align: center;">
+                        <div class=""><button class="btn-search circle element" onclick="fetchPokemon()"></button></div>
+                    </div>
+                    <div class="col-4" style="padding:12px;">
+                        <div class="btn-sm red element"></div><div class="btn-sm blue element"></div>
+                        <div class="pantallita element">
+                            <input type="text" placeholder="pikachu" id="pokeName" name="pokeName">
+                        </div>
+                    </div>
+                    <div class="dpad col-4">
+                        <div class="dpad-sq clear"></div>
+                        <div class="dpad-sq up element"></div>
+                        <div class="dpad-sq clear"></div>
+                        <div class="dpad-sq left element"></div>
+                        <div class="dpad-sq"></div>
+                        <div class="dpad-sq right element"></div>
+                        <div class="dpad-sq clear"></div>
+                        <div class="dpad-sq down element"></div>
+                        <div class="dpad-sq clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pokedex-right element">
+            <div class="pantallita-2">
+                <div class="row">
+                    Tipo: <div id="pokeType" class="poke-value"></div>
+                </div>
+                <div class="row">
+                    <p>Movimientos:</p> 
+                    <div id="pokeSkll" class="poke-value"></div>
+                </div>
+                <div class="row">
+                    <div class="col col-4">
+                        <p>HP:</p> 
+                        <div id="pokeHp" class="poke-value"></div>
+                    </div>
+                    <div class="col col-4">
+                        <p>Ataque</p> 
+                        <div id="pokeAttk" class="poke-value"></div>
+                    </div>
+                    <div class="col col-4">
+                        <p>Defensa</p> 
+                        <div id="pokeDef" class="poke-value"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-4">
+                        <p>Ataque Esp.</p> <div id="pokeSpattk" class="poke-value"></div>
+                    </div>
+                    <div class="col col-4">
+                        <p>Defensa Esp.</p> 
+                        <div id="pokeSpdef" class="poke-value"></div>
+                    </div>
+                    <div class="col col-4">
+                        <p>Velocidad</p> 
+                        <div id="pokeSpd" class="poke-value"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="botones-1">
+                <div class="btn-md blue element"></div>
+                <div class="btn-md blue element"></div>
+                <div class="btn-md blue element"></div>
+                <div class="btn-md blue element"></div>
+                <div class="btn-md blue element"></div>
+                <div class="btn-md blue element"></div>
+                <div class="btn-md blue element"></div>
+                <div class="btn-md blue element"></div>
+                <div class="btn-md blue element"></div>
+                <div class="btn-md blue element"></div>
+            </div>
+            <div class="botones-2" style="margin-bottom: 10px; display:flex; justify-content: end;">
+                <div class="btn-sm black element"></div><div class="btn-sm black element"></div>
+            </div>
+            <div class="botones-3" style="">
+                <div class="btn-md white element"></div>
+                <div class="btn-md white element"></div>
+            </div>
+            <div class="botones-4">
+                <div class="element yellow circle" style="width:44px; height:44px;"></div>
+            </div>
+            <div class="botones-5">
+                <div class="pantallita-3">
+                    <div class="row">
+                        Peso: <div id="pokeWeight"></div>
+                    </div>
+                </div>
+                <div class="pantallita-3">
+                    <div class="row">
+                        Altura: <div id="pokeHeight"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/pokedex.js"></script>
+</body>
+</html>
